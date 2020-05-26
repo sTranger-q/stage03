@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework03</title>
+</head>
+<body>
+    <h1>增加管理员</h1>
+    <table>
+        <tr>
+            <td>姓名：</td>
+            <td><input type="text" maxlength="10" name="username"></td>
+            <td>10个字符以内</td>
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <td><input type="password" maxlength="10" name="password"></td>
+            <td>10个字符以内</td>
+        </tr>
+        <tr>
+            <td>性别：</td>
+            <td>
+                <input type="radio" name="gender" value="1">男士
+                <input type="radio" name="gender" value="2">女士
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2">角色：</td>
+            <td><input type="checkbox" name="role" value="1">超级管理员</td>
+            <td rowspan="2">至少一个角色</td>
+        </tr>
+        <tr>
+            <!-- <td></td> -->
+            <td><input type="checkbox" name="role" value="2">账单管理员</td>
+            <!-- <td></td> -->
+        </tr>
+        <tr>
+            <td>头像：</td>
+            <td><input type="file"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" title="提交"><input type="reset"></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
