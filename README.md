@@ -28,3 +28,10 @@ UI（User Interface）界面设计---->前端开发/后端开发---->测试-----
             list-style: none;
         }
 ```
+
+- 选择器全中:
+	一般来说,<body>里的最外层标签一般都要加id属性,以提高优先级,避免冲突
+	```css
+	<-- div#header+tab -->
+	<div id="header"></div>
+	```
