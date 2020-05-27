@@ -31,7 +31,22 @@ UI（User Interface）界面设计---->前端开发/后端开发---->测试-----
 
 - 选择器全中:
 	一般来说,<body>里的最外层标签一般都要加id属性,以提高优先级,避免冲突
+	
 	```css
 	<-- div#header+tab -->
 	<div id="header"></div>
 	```
+	
+- 标签分类及嵌套
+   - 将元素设置为块元素
+   ```css
+   span{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    /* 將元素設置成块元素 */
+    display: block;
+}
+   ```
+   
+   - diplay:转换元素类型
