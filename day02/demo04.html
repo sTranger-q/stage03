@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+    <style>
+        #div1{
+            width:200px;
+            height:200px;
+            background-color:pink;
+            /* 过渡 */
+            transition: all 0.5s;
+        }
+        #div1:hover{
+            /* 匹配id为div1的元素,在鼠标划过时的变化 */
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+</body>
+</html>
