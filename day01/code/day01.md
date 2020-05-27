@@ -1,4 +1,4 @@
-​	授课老师 ： 石博文 
+	授课老师 ： 石博文 
 
 联系方式 ： shibw@tedu.cn
 
@@ -277,6 +277,7 @@
   <input type="submit">  提交按钮
   <select></select>  下拉菜单
   <textarea></textarea> 文本域 
+  <button></button>也有提交效果
 ```
 
 
