@@ -88,17 +88,22 @@ p{
 特殊用法 :
  1. 类选择器与其他选择器结合使用
       注意标签与类选择器结合时,标签在前,类选择器在后
-    	例 : a.c1{ }
+        	例 : a.c1{ }
  2. class属性值可以写多个,共同应用类选择器的样式
     	例 : 
-    	.c1{  }
-    	.c2{  }						
+        	.c1{  }
+        	.c2{  }						
   	<p class="c1 c2"></p>
 #### 4. 群组选择器
 为一组元素统一设置样式
 语法 :
 ```css
 selector1,selector2,selector3{	         
+}
+p,div,.red,#div1{
+    width:200px;
+    height:200px;
+    background-color:greenyellow;
 }
 ```
 #### 5. 后代选择器
@@ -434,20 +439,20 @@ padding-left
 2. 作用：调整元素与元素之间的距离
 3. 特殊：
     		1）margin:0; 取消默认外边距  
-    		2）margin:0 auto;左右自动外边距，实现元素在父元素范围内水平居中  
-    		3）margin:-10px;元素位置的微调  
+        		2）margin:0 auto;左右自动外边距，实现元素在父元素范围内水平居中  
+        		3）margin:-10px;元素位置的微调  
 4. 单方向外边距：只取一个值
     		margin-top
-    		margin-right
-    		margin-bottom
-    		margin-left
+        		margin-right
+        		margin-bottom
+        		margin-left
 5. 外边距合并：  
     		1）垂直方向  
-    			1. 子元素的margin-top作用于父元素上  
-      			解决：  
-      				为父元素添加顶部边框；  
-      				或为父元素设置padding-top:0.1px;  
-      		2. 元素之间同时设置垂直方向的外边距，最终取较大的值  
+        			1. 子元素的margin-top作用于父元素上  
+            			解决：  
+            				为父元素添加顶部边框；  
+            				或为父元素设置padding-top:0.1px;  
+            		2. 元素之间同时设置垂直方向的外边距，最终取较大的值  
         2）水平方向  
         	块元素对盒模型相关属性（width,height,padding,border,margin）完全支持;  
         	行内元素对盒模型相关属性不完全支持，不支持width/height,不支持上下边距  
