@@ -13,6 +13,7 @@ def rabbit(month):
         number = 1
         return number
     else:
+
         return rabbit(month - 1) + rabbit(month - 2)
 
 
