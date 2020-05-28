@@ -13,13 +13,24 @@ def bubbling():
             return
 
 
-bubbling()
-print(list01)
+#
+# bubbling()
+# print(list01)
 
 
 # 2.对一组数完成插入排序
 def insert():
-    pass
+    for i in range(1, len(list01)):
+        mark = list01[i]
+        index = i - 1
+        while index >= 0 and list01[index] > mark:
+            list01[index + 1] = list01[index]
+            index -= 1
+        list01[index + 1] = mark
+
+
+insert()
+print(list01)
 
 
 # 3.对一组数完成选择排序
