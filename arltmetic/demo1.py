@@ -1,4 +1,5 @@
-list1 = [88,2,32,12,86,23,34,124]
+list1 = [88, 2, 32, 12, 86, 23, 34, 124]
+
 
 # def bubbleSort(arr):
 #     for i in range(1,len(arr)):
@@ -41,17 +42,18 @@ list1 = [88,2,32,12,86,23,34,124]
 # 幼崽 1 0 1 1 2 3
 # 成年 0 1 1 2 3 5
 # 总数 1 1 2 3 5 8
-#f(n) = f(n-1) + f(n-2)
+# f(n) = f(n-1) + f(n-2)
 # def fc_seq(i):
- #     list1 =[1,1]
+#     list1 = [1, 1]
 #     for item in range(i):
 #         if item > 1:
-#             list1.append(list1[item-1]+list1[item-2])
+#             list1.append(list1[item - 1] + list1[item - 2])
 #     print('第{}个月的兔子的总数{},兔子的明细{}'
-#           .format(i,sum(list1[0:i]),list1))
-#     print("%s,%s"%('a','c'))
+#           .format(i, sum(list1[0:i]), list1))
+#     print("%s,%s" % ('a', 'c'))
 #
-# d = fc_seq(3)
+#
+# d = fc_seq(1)
 
 """
 小明家必须要过一座桥。小明过桥最快要１秒，
@@ -72,48 +74,48 @@ list1 = [88,2,32,12,86,23,34,124]
 
 小明和弟弟　３ｓ
 """
-print(3+1+12+3+6+1+3)
-
-import random
-while True:
-    # 左岸
-    a = [1,3,6,8,12]
-    # 右岸
-    b = []
-    STEP = 0
-    # 存储单程时间
-    step = []
-
-    while True:
-        x = random.sample(a,2)
-        print(x)
-        b.extend(x)
-        a.remove(x[0])
-        a.remove(x[1])
-
-        if x[0] > x[1]:
-            step.append(x)
-            step.append(x[0])
-        else:
-            step.append(x)
-            step.append(x[1])
-
-        if a == []:
-            break
-
-        y = random.sample(b,1)
-        a.extend(y)
-        b.remove(y[0])
-        step.append(y[0])
-
-        step.append('>>')
-
-    for i in step:
-        if type(i) == int:
-            STEP = STEP + i
-
-    if STEP <= 30:
-        break
-
-print(step)
-print(STEP)
+# print(3+1+12+3+6+1+3)
+#
+# import random
+# while True:
+#     # 左岸
+#     a = [1,3,6,8,12]
+#     # 右岸
+#     b = []
+#     STEP = 0
+#     # 存储单程时间
+#     step = []
+#
+#     while True:
+#         x = random.sample(a,2)
+#         print(x)
+#         b.extend(x)
+#         a.remove(x[0])
+#         a.remove(x[1])
+#
+#         if x[0] > x[1]:
+#             step.append(x)
+#             step.append(x[0])
+#         else:
+#             step.append(x)
+#             step.append(x[1])
+#
+#         if a == []:
+#             break
+#
+#         y = random.sample(b,1)
+#         a.extend(y)
+#         b.remove(y[0])
+#         step.append(y[0])
+#
+#         step.append('>>')
+#
+#     for i in step:
+#         if type(i) == int:
+#             STEP = STEP + i
+#
+#     if STEP <= 30:
+#         break
+#
+# print(step)
+# print(STEP)
