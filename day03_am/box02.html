@@ -5,16 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>盒模型-表框</title>
     <style>
-        div{
+        #d1{
+            width: 0;
+            height: 0;
+            border: 50px solid transparent;
+            border-top-color : blue;
+        }
+        #d2{
+            width: 600px;
+            height: 50px ;
+            border: 5px solid blue;
+            border-radius: 50%;
+        }
+        #d3{
+            text-align: center;
+            line-height: height;
             width: 200px;
             height: 200px;
-            border: 5px solid greenyellow;
+            background-color: red;
+            /* border-radius不依赖边框属性，可以单独设置 */
+            /* border-radius: 100px; */
+            border-radius:50%;
+            
         }
     </style>
 </head>
 <body>
-    <div>
-        
-    </div>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3">你好</div>
 </body>
 </html>
