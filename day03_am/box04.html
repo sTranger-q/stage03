@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒模型-外边距</title>
+    <style>
+        #parent{
+            width: 200px;
+            height: 200px;
+            background-color: red; 
+            /*  margin: 100px 0 0 100px; */
+            margin: 0 auto;
+            /* 离上边100px，左右自动,下边0 */
+            /* margin: 100px auto 0; */
+        }
+        #d1{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            margin: 100px auto 0;
+        }
+        #d2{
+            width: 100px;
+            height: 100px;
+            background-color: violet;
+            display: inline-block;
+            margin-right: 20px;
+        }
+        #d3{
+            width: 100px;
+            height: 100px;
+            background-color: turquoise;
+            display: inline-block;
+            margin-left: 100px  ;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+    <div id="d1"></div>
+
+</div>
+<div id="d2"></div>
+<div id="d3"></div>
+</body>
+</html>
