@@ -444,21 +444,25 @@ padding-left
         		3）margin:-10px;元素位置的微调  
 4. 单方向外边距：只取一个值
     		margin-top
-        		margin-right
-        		margin-bottom
-        		margin-left
-5. 外边距合并：  
+      margin-right
+      margin-bottom
+      margin-left
+      
+5. 外边距合并： 
+``` 
     		1）垂直方向  
         			1. 子元素的margin-top作用于父元素上  
-      
+  
             			解决：  
             				为父元素添加顶部边框；  
             				或为父元素设置padding-top:0.1px;  
-            		2. 元素之间同时设置垂直方向的外边距，最终取较大的值  
-        2）水平方向  
-        	块元素对盒模型相关属性（width,height,padding,border,margin）完全支持;  
-        	行内元素对盒模型相关属性不完全支持，不支持width/height,不支持上下边距  
-        	行内元素水平方向上的外边距会叠加显示  
+  
+ 			 			2.元素之间同时设置垂直方向的外边距，最终取较大的值  
+```
+                2）水平方向  
+                    块元素对盒模型相关属性（width,height,padding,border,margin）完全支持;  
+                    行内元素对盒模型相关属性不完全支持，不支持width/height,不支持上下边距  
+                    行内元素水平方向上的外边距会叠加显示  
 6. 带有默认边距的元素：  
     body,h1,h2,h3,h4,h5,h6,p,ul,ol{
       margin:0;
