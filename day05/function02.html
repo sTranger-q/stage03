@@ -10,14 +10,17 @@
         click me!
     </button>
     <script>
+        console.log(btn)//undefined
+        console.log(sayHello)//function
         var btn=document.getElementById('btn')
-        console.log(btn.onclick)
+        // console.log(btn.onclick)
+        // sayHello定义在下边...可以在上边找到---->声明提前
         console.log(sayHello);
+        btn.onclick=sayHello;
         function sayHello() {
             alert('hello world');
         }
-        btn.onclick=sayHello;
-        console.log(btn.onclick)
+        // console.log(btn.onclick)
          // 重写，绑定匿名函数
         // btn.onclick=function(){
         //     alert('hello world');
@@ -26,6 +29,8 @@
         // (function(){
         //     alert('hello,world, ')
         // })()
+        
+
     </script>
 </body>
 </html>
