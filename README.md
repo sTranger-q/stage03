@@ -60,4 +60,22 @@ UI（User Interface）界面设计---->前端开发/后端开发---->测试-----
 - JS存在声明提前：
    1. 全局的变量和函数在声明时，会进行声明提前。
    2. 变量会将变量名提前到最上方，值留在原地。
-   3. 函数会将函数名和函数体提前到最上方。
+   3. 函数名会携带函数的内容一起提前到最上方。
+
+```javascript
+  <button id='btn'>
+        click me!
+    </button>
+    <script>
+        console.log(btn)//undefined
+        console.log(sayHello)//function
+        var btn=document.getElementById('btn')
+        // console.log(btn.onclick)
+        // sayHello定义在下边...可以在上边找到---->声明提前
+        console.log(sayHello);
+        btn.onclick=sayHello;
+        function sayHello() {
+            alert('hello world');
+        }
+    </script>
+```
