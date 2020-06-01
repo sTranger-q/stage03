@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打印九九乘法表</title>
+</head>
+<body>
+    <script>
+        var str="";
+        for(var r=1;r<10;r++){
+            for(var c=1;c<=r;c++){
+               str+=r+'x'+c+'='+r*c+'\t';
+            }
+            str+='\n';
+        }
+        console.log(str)
+    </script>
+</body>
+</html>
