@@ -7,10 +7,15 @@
 </head>
 <body>
     <script>
-        function sayHello(){
-            alert('hello,world')
+        function sayHello(name){
+            if (name==undefined){
+                alert('Hello');
+                return;
+            }
+            alert('Hello, '+name+'!');
         }
-        sayHello();
+        sayHello();//定义参数不传值事，默认为undefined
+
     </script>
 </body>
 </html>
