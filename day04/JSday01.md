@@ -193,7 +193,7 @@ console.log(typeof(n));//string
       var a=1;
       //a的值              2           3         4
         console.log(a++ + ++a + a++)
-        							1    +    3   +  3
+//递增运算的值	1    +    3   +  3
 ```
 #### 5) 关系运算符/比较运算符
 	> <     
