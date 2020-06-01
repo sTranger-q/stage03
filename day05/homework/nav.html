@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul,li{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        ul{
+            width: 600px;
+            /* height: 50px; */
+            background-color: #4f8dfe;
+            /* overflow: hidden; */
+        }
+        ul>li{
+            /* width: 50px; */
+            width: auto;
+            height: auto;
+            text-align: center;
+            float: left;
+            /* color: #fff; */
+            padding: 5px 10px;
+            margin: 5px 10px;
+        }
+        ul>li:hover{
+            cursor: pointer;
+            color: #01318a;
+        }
+        .clear{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <!-- 休息10:00~10:15 -->
+        <!-- <li>
+            <a href="">首页</a>
+        </li> -->
+        <li>首页</li>
+        <li>免费课</li>
+        <li>会员课</li>
+        <li>直播课</li>
+        <li >精品课</li>
+        <div class="clear"></div>
+    </ul>
+    <script>
+        var lis=document.getElementsByTagName('li');
+        for(i=0;i<lis.length;i++){
+            // console.log(lis[i]);
+            // var title=lis[i].innerHTML;
+            // console.log(title);
+            var title=lis[i].innerText;
+            console.log(title);
+            function clicktitle(str){
+                return function(){
+                alert(str);
+                }
+            }
+            lis[i].onclick=clicktitle(title);
+
+        }
+    </script>
+
+</body>
+</html>
