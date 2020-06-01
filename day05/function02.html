@@ -12,10 +12,15 @@
     <script>
         var btn=document.getElementById('btn')
         console.log(btn.onclick)
-        btn.onclick=function () {
+        function sayHello() {
             alert('hello world');
         }
+        btn.onclick=sayHello;
         console.log(btn.onclick)
+         // 重写，绑定匿名函数
+        // btn.onclick=function(){
+        //     alert('hello world');
+        // }
         // 匿名函数自调
         // (function(){
         //     alert('hello,world, ')
