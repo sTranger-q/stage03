@@ -7,15 +7,23 @@
 </head>
 <body>
     <script>
-        var a=10;
-
-        function up(){
-            var a =1;
-            console.log(b);
-            console.log(a);
+        // 闭包
+        function up(num) {
+            return function(){
+                console.log(num+1)
+            }
         }
-        up();
-        console.log(a);
+        
+        up(1)();
+        // var a=10;
+
+        // function up(){
+        //     var a =1;
+        //     console.log(b);
+        //     console.log(a);
+        // }
+        // up();
+        // console.log(a);
 
     </script>
 </body>
