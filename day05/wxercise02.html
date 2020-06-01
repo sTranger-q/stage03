@@ -6,7 +6,7 @@
     <title>打印九九乘法表</title>
 </head>
 <body>
-    <script>
+    <!-- <script>
         var str="";
         for(var r=1;r<10;r++){
             for(var c=1;c<=r;c++){
@@ -15,6 +15,20 @@
             str+='\n';
         }
         console.log(str)
-    </script>
+        document.write(str)
+    </script> -->
+        <script>
+            var str="";
+            for(var r=1;r<10;r++){
+                for(var c=1;c<=r;c++){
+                   document.write(r+'x'+c+'='+r*c+'&nbsp&nbsp&nbsp');
+                }
+                document.write('<br>');
+                // document.write 将内容显示在页面上（临时使用）
+                // 但可能会清空原有内容。
+            }
+            // console.log(str)
+            // document.write(str)
+        </script>
 </body>
 </html>
