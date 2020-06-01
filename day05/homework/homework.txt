@@ -1,0 +1,4 @@
+作业，nav.html导航栏，添加鼠标点击功能 
+level1: 鼠标点击li时 alert('hello')
+level2: 鼠标点击li时 alert('第n个按钮')
+level3: 鼠标点击li时，显示对应li的内容
