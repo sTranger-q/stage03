@@ -93,3 +93,16 @@ UI（User Interface）界面设计---->前端开发/后端开发---->测试-----
         }
     </script>
 ```
+
+2.this:指向对象本身，类似python中的self
+
+```javascript
+    <script>
+        var lis=document.getElementsByTagName('li');
+        for(var i=0;i<lis.length;i++){
+            lis[i].onclick=function(){
+                alert(this.innerText);
+            }
+        }
+    </script>
+```

@@ -50,12 +50,22 @@
         <div class="clear"></div>
     </ul>
     <script>
+        var lis=document.getElementsByTagName('li');
+        for(var i=0;i<lis.length;i++){
+            lis[i].onclick=function(){
+                alert(this.innerText);
+            }
+        }
+    </script>
+    <!-- <script>
         var lis=document.getElementsByTagName('li')
         for(let i=0;i<lis.length;i++){
             lis[i].onclick=function(){
-                alert(lis[i].innerText);
+                // alert(lis[i].innerText);
+                // this只带当前对象，类似Python中的self
+                alert(this.innerText);
             }
-        }
+        } -->
     </script>
     <script>
         //方法二
