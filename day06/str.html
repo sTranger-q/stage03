@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <script>
+        // var str='abcd';
+
+        // for(var i in str){
+        //     //i是索引值
+        //     console.log(i,str[i]);
+        // }
+
+        var str='this is a test string';
+        re=str.indexOf('s',10);//找一个,找不到为-1
+        console.log(re);
+
+        // 字符串截取  substring,不包括endindex
+        console.log(str.substring(2,5));
+
+        //substr
+        console.log(str.substr(2,10));
+        console.log(str.substr(2));
+    </script>
+</body>
+</html>
