@@ -8,10 +8,15 @@
         #d1{
             width: 500px;
             height: 200px;
-            background-color: cadetblue;
+            background-color:chartreuse;
             color: crimson;
             text-align:center;
             margin: 0 auto;
+            font-size: 32px;
+        }
+        .date{
+            border: crimson solid 2px;
+            margin-right: 2px;
         }
     </style>
 </head>
@@ -26,7 +31,7 @@
         </p>
     </div>
     <script>
-        var int=self.setInterval("showDate()",1000)
+        var int=setInterval("showDate()",1000)
         function showDate(){
             var festival=new Date('2020/6/25');
              var now=new Date();
