@@ -106,3 +106,31 @@ UI（User Interface）界面设计---->前端开发/后端开发---->测试-----
         }
     </script>
 ```
+
+3. JSON对象写法：两种无本质区别，key加引号适用与前后端数据交互
+
+```javascript
+var qtx={name:'qtx',age:18};//<--JSON对象
+  var obj={
+            'name':'Tom',
+            'age':19
+        };
+```
+
+4.可以用JSON.stringify将对象转换为字符串，以便于将数据发送给服务端。
+
+```javascript
+var res=JSON.stringify(qtx);
+        console.log(res);//-->'{"name":"qtx","age":18}'
+```
+
+5.JSON.parse可以将符合格式的字符串转换为对象，以便于在接受到服务端数据之后的数据处理
+
+```javascript
+  var json_obj=JSON.parse(json_res);
+        console.log(json_obj);
+//Object
+//age: 18  name: "qtx"
+//__proto__: Object
+```
+

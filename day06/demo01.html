@@ -8,10 +8,10 @@
 <body>
     <script>
         //不带数据的对象
-        var obj={};
-        console.log(typeof obj);
-        obj.value=10;
-        console.log(obj);
+        // var obj={};
+        // console.log(typeof obj);
+        // obj.value=10;
+        // console.log(obj);
         //带数据的对象
         var qtx={name:'qtx',age:18};
         // console.log(qtx);
@@ -25,6 +25,22 @@
             console.log(qtx .key);//-->undefined
             console.log(qtx[key]);//good
         }
+        
+        var obj={
+            'name':'Tom',
+            'age':19
+        };
+        for(var key in obj){
+            // console.log(key);
+            // console.log(obj.key);
+            // console.log(obj[key]);
+        }
+        //字符串格式的数据
+        var json_res=JSON.stringify(qtx);
+        console.log(json_res);
+
+        var json_obj=JSON.parse(json_res);
+        console.log(json_obj);
 
     </script>
 </body>
