@@ -10,17 +10,62 @@
             height: 200px;
             background-color: cadetblue;
             color: crimson;
-            text-align: center;
-            
+            text-align:center;
+            margin: 0 auto;
         }
     </style>
 </head>
-<body>
+<body onload="showDate()">
     <div id='d1'>
         <p>距离端午节还剩</p>
         <p>
-            <span>xx</span>天<span>xx</span>小时<span>xx</span><span>分钟</span>
+            <span class='date' id='day'></span>天
+            <span class='date' id='hour'></span>小时
+            <span class='date' id='minute'></span>分钟
+            <span class='date' id='second'></span>秒
         </p>
     </div>
+    <script>
+        var int=self.setInterval("showDate()",1000)
+        function showDate(){
+            var festival=new Date('2020/6/25');
+             var now=new Date();
+
+            time=festival-now;//1903785846毫秒
+            //1天-->24小时-->24*60分钟-->24*60*60秒-->..*1000毫秒
+            var leftDays=parseInt(time/(1000*3600*24));
+            var leftHours=parseInt((time%(1000*3600*24))/(1000*36*60));
+            var leftMinutes=parseInt(((time%(1000*3600*24))%(1000*36*60))/(1000*60));
+            var leftSeconds=parseInt((((time%(1000*3600*24))%(1000*36*60))%(1000*60))/1000);
+            // console.log(leftDays);
+            // console.log(leftHours);
+            // console.log(leftMinutes);
+            var date=document.getElementById('day');
+            var hour=document.getElementById('hour');
+            var minute=document.getElementById('minute');
+            var second=document.getElementById('second')
+            
+            date.innerText=leftDays.toString();
+           
+            if(leftHours<10){
+                    hour.innerText='0'+leftHours;
+            }else{
+                hour.innerText=leftHours.toString();
+            }
+            
+            if(leftMinutes<10){
+                    minute.innerText='0'+leftMinutes;
+            }else{
+                minute.innerText=leftMinutes.toString();
+            }
+           
+            if(leftSeconds<10){
+                    second.innerText='0'+leftSeconds;
+            }else{
+                second.innerText=leftSeconds.toString();
+            }
+        }
+        
+    </script>
 </body>
 </html>
