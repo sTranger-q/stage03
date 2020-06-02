@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String练习</title>
+</head>
+<body>
+    <script>
+        var email='shibw@tedu.cn';
+        //定义函数 根据用户传入的邮箱
+        //打印：
+        //用户 shibw   运营商tedu.cn
+        function findStr(str){
+            // var index=str.indexOf('@');
+            // console.log(str.substring(0,index));
+            // console.log(str.substring(index+1));
+           var  lis_str=str.split('@');
+            console.log(lis_str[0]);
+            console.log(lis_str[1]);
+        }
+        findStr(email);
+        
+    </script>
+</body>
+</html>
