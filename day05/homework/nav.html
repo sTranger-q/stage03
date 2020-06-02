@@ -50,8 +50,17 @@
         <div class="clear"></div>
     </ul>
     <script>
-        var lis=document.getElementsByTagName('li');
-        for(var i=0;i<lis.length;i++){
+        var lis=document.getElementsByTagName('li')
+        for(let i=0;i<lis.length;i++){
+            lis[i].onclick=function(){
+                alert(lis[i].innerText);
+            }
+        }
+    </script>
+    <script>
+        //方法二
+        // var lis=document.getElementsByTagName('li');
+        // for(var i=0;i<lis.length;i++){
             // console.log(lis[i]);
             // var title=lis[i].innerHTML;
             // console.log(title);
@@ -63,12 +72,12 @@
             //     }
             // }
             // lis[i].onclick=clicktitle(title);
-                lis[i].onclick=(function(str){
-                    return function(){
-                        alert(str)
-                    }
-                })(lis[i].innerText)
-        }
+        //         lis[i].onclick=function(str){
+        //             return function(){
+        //                 alert(str)
+        //             }
+        //         }(lis[i].innerText)
+        // }
     </script>
 
 </body>

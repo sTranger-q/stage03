@@ -79,3 +79,17 @@ UI（User Interface）界面设计---->前端开发/后端开发---->测试-----
         }
     </script>
 ```
+
+# Day06
+
+1. let声明:let和for一起使用，会将for循环当做一个独立的代码块，let声明的变量只在当前代码块中（for,function），可以起到类似闭包保留变量的作用
+```javascript
+    <script>
+        var lis=document.getElementsByTagName('li')
+        for(let i=0;i<lis.length;i++){
+            lis[i].onclick=function(){
+                alert(lis[i].innerText);
+            }
+        }
+    </script>
+```
