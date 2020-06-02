@@ -71,7 +71,7 @@ var arr2=new Array(1,2,3,4);
           return a-b;
         }
         ```
-       
+      
       
       作用：作为参数传递到sort()中,会自动传入两个元素进行比较,如果a-b>0,交换元素的值,自定义升序排列
       
@@ -146,8 +146,8 @@ length ：获取字符串长度
 
 
 
-+ 模式匹配
-  
+#### 5.模式匹配
+
 + 正则表达式对象 RegExp
   
     RegExp : Regualr Expression
