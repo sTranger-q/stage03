@@ -212,6 +212,8 @@ var elems = document.getElementsByClassName("");
 
 3. 元素节点对象提供了以下属性来操作元素内容
 
+   this:只带当前对象，类似与Python中的self.
+
 ```text
 innerHTML : 读取或设置元素文本内容,可识别标签语法,不包括本身标签
 outerHTML:  读取或设置元素文本内容,可识别标签语法,包括本身标签
