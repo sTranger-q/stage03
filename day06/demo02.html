@@ -20,10 +20,16 @@
         //     console.log(i,arr[i]);
         // }
         //i找的时index
-        for(var i in arr){
-            console.log(typeof i);//-->string 数组的索引为字符串
-            console.log(i,arr[i]);
-        }
+        // for(var i in arr){
+        //     console.log(typeof i);//-->string 数组的索引为字符串
+        //     console.log(i,arr[i]);
+        // }
+
+        //从索引值为1的位置开始，删除1个元素，添加2,3,4,5
+        arr.splice(1,1,2,3,4,5);//返回被删除的元素
+        console.log(arr);
+        console.log(arr.toString());
+        console.log(arr.join("-"));
     </script>
 </body>
 </html>
