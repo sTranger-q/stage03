@@ -6,6 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        var now=new Date();
+        console.log(now);
+
+        now.getFullYear();
+        now.getMonth();
+        now.getDate();//日期
+        now.getDay();//星期
+        now.getHours();
+        now.getMinutes();
+        now.getSeconds();
+
+        var festival=new Date('2020/6/25');
+        console.log(festival);
+
+        now.getTime();
+        //1000毫秒=1秒
+        //端午节时间对象-当前时间对象=时间差
+        console.log(festival-now);
+
+    </script>
 </body>
 </html>
