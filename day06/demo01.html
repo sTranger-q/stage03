@@ -13,13 +13,19 @@
         obj.value=10;
         console.log(obj);
         //带数据的对象
-        var qtx={nam:'qtx',age:18};
-        console.log(qtx);
-        console.log(qtx.nam);
-        console.log(qtx.age);
-        // ↑↓写法结果相同
-        console.log(qtx['nam']);
-        console.log(qtx['age']);
+        var qtx={name:'qtx',age:18};
+        // console.log(qtx);
+        // console.log(qtx.nam);
+        // console.log(qtx.age);
+        // // ↑↓写法结果相同
+        // console.log(qtx['nam']);
+        // console.log(qtx['age']);
+        for(var key in qtx){
+            console.log(key);//对象属性名
+            console.log(qtx .key);//-->undefined
+            console.log(qtx[key]);//good
+        }
+
     </script>
 </body>
 </html>
