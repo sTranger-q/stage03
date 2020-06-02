@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>数组</title>
 </head>
 <body>
     <script>
         //数组
         var arr=[1,2,3];
-        //字符串
-        var str="hahahahah";
-        var str2=new String('hahah');
-        console.log(typeof arr);
-        console.log(typeof str);
-        console.log(typeof str2);
-        console.log(str2);
+        var arr2=new Array(1,2,3,4);
+        console.log(arr);
+        console.log(arr2);
+
+        // js中的数组可以是不连续的
+        arr[5]=5;
+
+        // for(var i=0;i<arr.length;i++){
+        //     console.log(i,arr[i]);
+        // }
+        //i找的时index
+        for(var i in arr){
+            console.log(typeof i);//-->string 数组的索引为字符串
+            console.log(i,arr[i]);
+        }
     </script>
 </body>
 </html>
