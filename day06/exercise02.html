@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户输入邮箱，在页面显示</title>
+</head>
+<body>
+    <div>
+        邮箱: <input type="text" id='email'>
+        <button id='btn'>获取信息</button>
+    </div>
+
+    <div id='show'>
+        <!-- 显示 -->
+
+    </div>
+    <script>
+        var email=document.getElementById('email');
+        var btn=document.getElementById('btn');
+        var show=document.getElementById('show');
+        btn.onclick=function(){
+            //email是文本框
+            var arr=email.value.split('@');
+            show.innerHTML='<p>用户名：'+arr[0]+'</p>';
+            show.innerHTML+=  '<p>运营商：'+arr[1]+'</p>';
+           
+        }
+        //当按钮被点击时
+        //接受用户输入的邮箱
+        //根据邮箱解析出用户名和运营商
+        //将结果放到页面中显示
+        
+    </script>
+</body>
+</html>
