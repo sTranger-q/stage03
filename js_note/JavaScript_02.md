@@ -213,7 +213,8 @@ var elems = document.getElementsByClassName("");
 3. 元素节点对象提供了以下属性来操作元素内容
 
 ```text
-innerHTML : 读取或设置元素文本内容,可识别标签语法
+innerHTML : 读取或设置元素文本内容,可识别标签语法,不包括本身标签
+outerHTML:  读取或设置元素文本内容,可识别标签语法,包括本身标签
 innerText : 设置元素文本内容,不能识别标签语法
 value : 读取或设置表单控件的值
 ```
