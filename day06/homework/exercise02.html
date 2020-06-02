@@ -17,12 +17,13 @@
                 var index=parseInt(Math.random()*arr.length);
                 strColor+=arr[index];
             }
-            return function(){
-                
-                all.style.background=strColor;
-            }
+            return strColor;
         }
-        all.onload=randomColor();
+            
+        all.onload=function(){
+                
+                all.style.background=randomColor();
+            }
    
     </script>
 </body>
