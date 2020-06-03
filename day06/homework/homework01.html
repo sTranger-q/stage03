@@ -38,7 +38,7 @@
              var leftDate=document.getElementsByClassName('date');
              var countDate=document.getElementById('countDate')
             time=festival-now;//1903785846毫秒
-            if(time<0){
+            if(time<=0){
                 clearInterval(int);//停止计时器
                 countDate.innerHTML='<span>活动已经结束</span>';
                 return
