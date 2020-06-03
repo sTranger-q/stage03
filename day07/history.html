@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #a{
+            color: blue;
+            text-underline-position: below;
+        }
+        #a:hover{
+            cursor: pointer;
+        }
+        #a:active{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <button id='forward'>前进</button>
+    <button id='back'>后退</button>
+    <!-- <a href="http://www.baidu.com" target="_blank">百度</a> -->
+    <span id='a'>Tmooc</span>
+    <script>
+
+        var a=document.getElementById('a');
+        a.onclick=function(){
+            // console.log(location.href) // file:///home/stranger/Projects/class03/stage03/day07/history.html
+            location.href='http://www.tmooc.cn'
+            // location.reload();
+        }
+
+
+        console.log(history.length)
+        var fw=document.getElementById('forward');
+        var bk=document.getElementById('back');
+        fw.onclick=function(){
+            history.forward();
+        }
+        bk.onclick=function(){
+            history.back();
+        }
+
+    </script>
+</body>
+</html>
