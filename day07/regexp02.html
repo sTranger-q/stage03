@@ -6,6 +6,16 @@
     <title>正则表达式</title>
 </head>
 <body>
-    
+    <script>
+        var reg=new RegExp('is','ig');
+        var str='this is a test string';
+
+        // var res1=str.match(reg);
+        // var res2=str.match('is');
+        // console.log(res1);
+        // console.log(res2);
+        var newStr=str.replace(reg,'boom');
+        console.log(newStr);
+    </script>
 </body>
 </html>
