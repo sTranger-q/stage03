@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图2</title>
+    <style>
+        img{
+            display:inline;
+            border: 0;
+
+        }
+        div{
+            width: 739px;
+            height: 419px;
+            overflow: hidden;
+            margin: 0 auto;
+            margin-top: 200px;
+            font-size: 0;
+            position: relative;
+        }
+        p{
+            position: absolute;
+            /* 739-->1478--> */
+            /* transition: all 2s; */
+            /* left: -739px; */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p id='imgs'>
+        <img src="../imgs/gm1-6.jpg" alt=""><img src="../imgs/gm2-6.jpg" alt="">
+        <img src="../imgs/gm3-6.jpg" alt=""><img src="../imgs/gm4-6.jpg" alt="">
+        <img src="../imgs/gm5-6.jpg" alt="">
+        </p>
+    </div>
+    <script>
+        var imgs=document.getElementById('imgs');
+        var leftPosition=0;
+
+        var timerID=setInterval(slipImg,2000);
+
+        function slipImg(){
+            if(leftPosition==-4*739){
+                leftPosition=0;
+                imgs.style.left=leftPosition+'px';
+            }else{
+                leftPosition-=739;
+                imgs.style.left=leftPosition+'px';
+            
+            }
+        }
+    </script>
+</body>
+</html>
