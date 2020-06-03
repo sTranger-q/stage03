@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 350px;
+            background-color: red;
+            position: fixed;
+            right: 10px;
+            bottom: -350px;/*距窗口下方-的高度  将div隐藏在窗口下*/
+            transition: all 2s;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <script>
+        var div = document.getElementById('div1');
+        setTimeout(function(){
+            // 将div的样式中的bottom值设为0
+            div.style = 'bottom:0;'
+        },2000)
+    </script>
+</body>
+</html>
