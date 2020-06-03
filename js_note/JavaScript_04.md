@@ -8,6 +8,7 @@
    ```javascript
    alert()		//警告框
    confirm()	//确认框
+   prompt() //用户输入框
    ```
 
 2. ##### 定时器方法
