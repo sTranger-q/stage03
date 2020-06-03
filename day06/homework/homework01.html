@@ -23,7 +23,7 @@
 <body onload="showDate()">
     <div id='d1'>
         <p>距离端午节还剩</p>
-        <p>
+        <p id='countDate'>
             <span class='date' id='day'></span>天
             <span class='date' id='hour'></span>小时
             <span class='date' id='minute'></span>分钟
@@ -33,10 +33,16 @@
     <script>
         var int=setInterval("showDate()",1000)
         function showDate(){
-            var festival=new Date('2020/6/25');
+            var festival=new Date('2020/6/3 14:26:30');
              var now=new Date();
-
+             var leftDate=document.getElementsByClassName('date');
+             var countDate=document.getElementById('countDate')
             time=festival-now;//1903785846毫秒
+            if(time<0){
+                clearInterval(int);//停止计时器
+                countDate.innerHTML='<span>活动已经结束</span>';
+                return
+            }
             //1天-->24小时-->24*60分钟-->24*60*60秒-->..*1000毫秒
             var leftDays=parseInt(time/(1000*3600*24));
             var leftHours=parseInt((time/(3600*1000))%24);
@@ -46,7 +52,7 @@
             // console.log(leftHours);
             // console.log(leftMinutes);
 
-            var leftDate=document.getElementsByClassName('date');
+           
             var arr=new Array(leftDays,leftHours,leftMinutes,leftSeconds);
 
             if(leftDate.length==arr.length){
