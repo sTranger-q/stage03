@@ -39,9 +39,9 @@
             time=festival-now;//1903785846毫秒
             //1天-->24小时-->24*60分钟-->24*60*60秒-->..*1000毫秒
             var leftDays=parseInt(time/(1000*3600*24));
-            var leftHours=parseInt((time%(1000*3600*24))/(1000*36*60));
-            var leftMinutes=parseInt(((time%(1000*3600*24))%(1000*36*60))/(1000*60));
-            var leftSeconds=parseInt((((time%(1000*3600*24))%(1000*36*60))%(1000*60))/1000);
+            var leftHours=parseInt((time/(3600*1000))%24);
+            var leftMinutes=parseInt((time/(1000*60))%60);
+            var leftSeconds=parseInt((time/1000)%60);
             // console.log(leftDays);
             // console.log(leftHours);
             // console.log(leftMinutes);
