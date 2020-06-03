@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='div1' class='title'>演示元素操作</div>
+    <div id='div2' class='title'>演示元素操作</div>
+
+    <script>
+        var div=document.getElementById('div1');
+        
+        //操作属性
+       //设置属性（属性名，属性值）
+        div.setAttribute('id','mydiv');//div.id='mydiv';
+        //读取属性值（属性名）
+        console.log(div.getAttribute('id'));//div.id
+        //删除属性值（属性名）
+        div.removeAttribute('class');//div.class=''
+       
+    </script>
+</body>
+</html>
