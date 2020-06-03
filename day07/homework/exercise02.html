@@ -4,8 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>标题栏变色</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #empty{
+            height: 100px;
+        }
+        #title{
+            height: 40px;
+            background-color: #01204F;
+            margin: 0;
+            
+        }
+        .ulist{
+            position: absolute;
+            margin: 0;
+            
+            width: 984px;
+            list-style: none;
+            left: 10%;
+        }
+        li{
+            position: relative;
+            float: left;
+            padding: 10px;
+            font-size: 14px;
+            color: #ffffff;
+            font-family: arial, "Hiragino Sans GB", "Microsoft Yahei", 微软雅黑, 宋体, Tahoma, Arial, Helvetica, STHeiti;
+            font-weight: 700;
+            padding: 10;
+            /* transition: all 1s; */
+        }
+        .clerFloat{
+            clear: both;
+        }
+        .red{
+            background-color:#cc0000;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id='empty'></div>
+     
+    <div id='title'>
+        <ul class='ulist'>
+            <li class="slip red">首页</li>
+            <li class='slip'>国内</li>
+            <li class='slip'>国际</li>
+            <li class='slip'>军事</li>
+            <li class='slip'>财经</li>
+            <li class='slip'>娱乐</li>
+            <li class='slip'>体育</li>
+            <div class='clearFloat'></div>
+        </ul>
+    </div>
+    <script>
+        var titles=document.getElementsByClassName('slip');
+        console.log(titles);
+        var index=0;
+        for(let i=1;i<titles.length;i++){
+            titles[i].onmouseenter=function(){
+                this.className='slip red';
+            }
+             titles[i].onmouseleave=function(){
+                 this.className='slip';
+             } 
+        }
+
+    </script>
 </body>
 </html>
