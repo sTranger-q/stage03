@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正则表达式</title>
+</head>
+<body>
+    <p>
+        手机：<input type="text" id='phoneNum'>
+        <span id='show'></span>
+    </p>
+    <p>
+        <button id='btn' >验证手机号</button>
+    </p>
+    <script>
+        //写法1
+        // var reg=/is/;
+        //写法2
+        // var reg2=new RegExp('is');
+        // console.log(reg);
+        // console.log(reg2.lastIndex);
+        // var re='this'.match(reg);
+        // console.log(re);    
+        var phoneNum=document.getElementById('phoneNum');
+        var btn=document.getElementById('btn');
+        var show=document.getElementById('show');
+
+        btn.onclick= function(){
+            var userNum=phoneNum.value;
+            // var reg=/1[356789]\d{9}/;
+            var reg=new RegExp('^1[356789]\\d{9}$');
+            // console.log(reg);
+            // console.log(reg2);
+            var re=reg.test(userNum);
+
+            if(re){
+                show.innerText=userNum;
+            }else{
+                show.innerText='请输入正确的手机号';
+            }
+        }
+    </script>
+</body>
+</html>
