@@ -18,6 +18,10 @@
 **周期性定时器**
 	作用：每隔一段时间就执行一次代码
 
+​	js引擎负责调用function，会自动分配时间执行，setInterval只是把function放入队列
+
+​	使用：在不消耗太多资源时使用
+
 ```javascript
 //开启定时器:
 var timerID = setInterval(function,interval);
