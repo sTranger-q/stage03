@@ -45,29 +45,18 @@
             // console.log(leftDays);
             // console.log(leftHours);
             // console.log(leftMinutes);
-            var date=document.getElementById('day');
-            var hour=document.getElementById('hour');
-            var minute=document.getElementById('minute');
-            var second=document.getElementById('second')
-            
-            date.innerText=leftDays.toString();
-           
-            if(leftHours<10){
-                    hour.innerText='0'+leftHours;
-            }else{
-                hour.innerText=leftHours.toString();
-            }
-            
-            if(leftMinutes<10){
-                    minute.innerText='0'+leftMinutes;
-            }else{
-                minute.innerText=leftMinutes.toString();
-            }
-           
-            if(leftSeconds<10){
-                    second.innerText='0'+leftSeconds;
-            }else{
-                second.innerText=leftSeconds.toString();
+
+            var leftDate=document.getElementsByClassName('date');
+            var arr=new Array(leftDays,leftHours,leftMinutes,leftSeconds);
+
+            if(leftDate.length==arr.length){
+                for(var i=0;i<arr.length;i++){
+                    if(arr[i]<10){
+                        leftDate[i].innerText='0'+arr[i];
+                    }else{
+                    leftDate[i].innerText=arr[i].toString();
+                    }
+                }
             }
         }
         
