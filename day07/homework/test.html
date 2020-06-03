@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h1{
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
+    <h1>click me</h1>
     <script>
-        var count=0
-        console.log(count);
-        (function(){
-            count+=1;
-            console.log(count);
-        })()
-        console.log(count);
+     var h1=document.getElementsByTagName('h1')[0];
+     h1.onpointerdown=function(){
+         h1.style.color='red';
+     }
+     h1.onmouseup=function(){
+         h1.style.color='green';
+     }
     </script>
 </body>
 </html>

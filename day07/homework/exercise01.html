@@ -85,10 +85,10 @@
             var timerID=setInterval(changePic,3000);
             //鼠标移入，停止定时器
             var silder=document.getElementById('silder');
-            silder.onmouseenter=function(){
+            silder.onmouseover=function(){
                 clearInterval(timerID);
             }
-            silder.onmouseleave=function(){
+            silder.onmouseout=function(){
                 timerID=setInterval(changePic,3000);
             }
             //鼠标移出，启动定时器
