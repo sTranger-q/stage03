@@ -5,12 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            background-color: #ff5c1f;
+        div ul li img{
+            margin: 0;
+            border: 0;
+            padding: 0;
         }
+       #silderWind{
+        width: 739px;
+        height: 419px;
+        position: relative;
+        background-color: red;
+        overflow: hidden;
+       }
+       #silderList{
+        width: 4439px;
+        height: 100%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        /* left: -2956px; */
+        left: 0;
+        /* transition: left 1s; */
+        
+       }
+       #silderPic{
+           width: 739px;
+           height: 100%;
+           float: left;
+       }
     </style>
 <body>
-    
-
+    <div id='silderWind'>
+        <ul id='silderList'>
+           
+        </ul>
+    </div>
+    <script>
+        var imgs=''
+        for(var i=1;i<6;i++){
+            imgs+=`<li id='silderPic'><img src="../imgs/gm${i}-6.jpg" alt=""></li>`;
+        }
+        imgs+='<li id="silderPic"><img src="../imgs/gm1-6.jpg" alt=""></li>';
+        var silderList=document.getElementById('silderList');
+        var picNum=0
+        silderList.innerHTML=imgs;
+        var timer=setInterval(
+            function(){
+                picNum+=1;
+                silderList.style.transition='left 1s';
+                silderList.style.left=`-${picNum*739}px`;
+                if(picNum==5){
+                    picNum=0;
+                    setTimeout(
+                        function(){
+                            silderList.style.transition='none';
+                    silderList.style.left=`-${picNum*739}px`;
+                        },1000
+                    )
+                    
+                }
+            }
+        ,2000)
+    </script>
 </body>
 </html>
