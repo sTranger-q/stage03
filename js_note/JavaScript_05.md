@@ -68,6 +68,12 @@ ID 选择器：$("#d1")
 	否定筛选,除()中选择器外,其他元素:
  			 span:not(#silder>span)
 ```
+4. find函数，返回被选元素的后代元素
+```javascript
+  $('#selt').on('change',function(){
+            console.log($('#selt').find('option:selected').text());
+        })
+```
 #### 5）操作元素内容
 ```javascript
 html() //设置或读取标签内容,等价于原生innerHTML,可识别标签语法

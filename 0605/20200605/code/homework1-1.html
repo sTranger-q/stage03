@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/data.js"></script>
+    <style>
+        select,.opt{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        select{
+            height: 30px;
+        }
+        .opt{
+            text-align: center;
+            
+          
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+    <select name="" id="selt" >
+        <option value="0" calss='opt' selected='selected' id="opt1">请选择</option>
+        <option value="1" calss='opt' >1哈哈</option>
+        <option value="2" calss='opt'>2呵呵</option>
+        <option value="3" calss='opt'>3嘿嘿</option>
+        <option value="4" calss='opt'>4嘻嘻</option>
+    </select>
+    </form>
+    <script>
+        var opt1=document.getElementById('opt1');
+        console.log(opt1.getAttribute('selected'));
+        var selt=document.getElementById('selt');
+        $('#selt').on('change',function(){
+            console.log($('#selt').find('option:selected').text());
+        })
+        
+        // selt.onchange=function(){
+        //     console.log(selt.innerText);
+        // }
+    </script>
+    
+</body>
+</html>
