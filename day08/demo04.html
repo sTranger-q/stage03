@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作元素内容</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <input type="text" id='text' placeholder="输入内容在下方显示">
+    <h1></h1>
+    <script>
+        //当用户在Input写内容时，将内容在下方h1显示
+        $('#text').on('input',function(){
+            //this时Dom对象
+            $('h1').text($(this).val());
+        })
+        //onchange 当文本框值发生改变时触发（需要回车确认之后才触发）
+        //oninput 当在文本框输入内容时触发      
+
+    </script>
+</body>
+</html>

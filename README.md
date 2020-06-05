@@ -96,6 +96,8 @@ UI（User Interface）界面设计---->前端开发/后端开发---->测试-----
 
 2.this:指向对象本身，类似python中的self
 
+​	this 是DOM对象
+
 ```javascript
     <script>
         var lis=document.getElementsByTagName('li');
