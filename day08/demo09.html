@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>each函数</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        li{
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>首页</li>
+        <li>免费课</li>
+        <li>会员课</li>
+        <li>直播课</li>
+        <li>精品课</li>
+
+    </ul>
+    <script>
+        // var arr=[1,2,3,4,5];
+        $('li').each(function(index,element){
+                $(this).on('click',function(){
+                    alert($(this).text());
+              
+                })    
+        })
+    </script>
+</body>
+</html>

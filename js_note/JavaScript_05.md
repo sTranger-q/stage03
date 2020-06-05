@@ -162,7 +162,7 @@ $obj.remove();	//移除$obj
 
 #### 10）数据与对象遍历
 
-1. $(selector).each() 方法规定为每个匹配元素规定运行的函数
+1. $(selector).each() 方法规定为每个匹配元素规定运行的函数 selector:选择器
 
    ```javascript
    $(selector).each(function(index,element){})
