@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作属性</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <input id='check' type="checkbox" >已阅读并同意<a href="#">《协议》</a>
+    </div>
+    <button id='btn'  >提交</button>
+<script>
+    //当按钮被点击时，检测复选框是否被用户选中
+    //如果选中弹框，提交成功，否则，失败
+    // $('#btn').on('click',function(){
+        //is()-->根据参数匹配元素结合，如果至少有1个 则返回ture
+    //     if($('#check').is(':checked')){
+    //         console.log('ok');
+    //     }else{
+    //         console.log('false')
+    //     }
+    // })
+   
+    $('#btn').on('click',function(){
+        if($('#check').prop('checked')){
+            console.log('ok');
+            $(this).prop('className','aha');
+            console.log($(this).prop('className'))
+        }else{
+            console.log('false');
+        }
+    })
+</script>
+</body>
+</html>
