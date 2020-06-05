@@ -31,14 +31,54 @@
     <script src="../js/data.js"></script>
     <script>
         console.log(data);
-        var prov=$('#prov');
-        prov.append('<option value="" selected>省份</option>')
-        console.log(data[0].provname);
-        console.log(data.length);
-        for(var index in data){
+        
+        var pro;
+        var city;
 
-            prov.append('<option value="" class="opt">'+data[index].provname+'</option>');
-        }
+        $('#prov').html('<option value="0" >请选择</option>');
+        $('#city').html('<option value="0" >请选择</option>');
+        $('#area').html('<option value="0" >请选择</option>');
+        
+
+        $.each(data,function(index,element){
+            $('#prov').append(`<option value="${element.provld}"  class='opt'>`+element.provname+'</option>');
+        })
+
+        $('#prov').on('change',function(){
+            $('#city').html('<option value="0" >请选择</option>');
+            $('#area').html('<option value="0" >请选择</option>');
+            pro=$('#prov').find('option:selected').text();
+            if(pro=='请选择'){
+                return
+            }
+            $.each(data,function(index,element){
+                if(pro==element.provname){
+                    $.each(element.citys,function(i,c){
+                        $('#city').append(`<option value="${c.cityId}"  class='opt'>`+c.cityname+'</option>');
+                    })
+                }
+            })
+        })
+        
+        $('#city').on('change',function(){
+            $('#area').html('<option value="0" >请选择</option>');
+            // var pro=$('#prov').find('option:selected').text();
+            city=$('#city').find('option:selected').text();
+            if(city=='请选择'){
+                return
+            }
+            $.each(data,function(i,p){
+                if(pro==p.provname){
+                    $.each(p.citys,function(j,c){
+                        if(city==c.cityname){
+                            $.each(c.areas,function(r,a){
+                                $('#area').append(`<option value="${a.areald}"  class='opt'>`+a.areaname+'</option>');
+                            })
+                        }
+                    })
+                }
+            })
+        })
     </script>
 </body>
 </html>
