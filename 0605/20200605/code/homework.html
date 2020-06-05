@@ -16,6 +16,14 @@
     <script src="../js/data.js"></script>
     <script>
         console.log(data);
+        var prov=$('#prov');
+        prov.append('<option value="" selected>省份</option>')
+        console.log(data[0].provname);
+        console.log(data.length);
+        for(var index in data){
+
+            prov.append('<option value="" >'+data[index].provname+'</option>');
+        }
     </script>
 </body>
 </html>
