@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        select,.opt{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        select{
+            height: 30px;
+        }
+        .opt{
+            text-align: center;
+            
+          
+        }
+    </style>
 </head>
 <body>
     <select name="" id="prov"></select>
@@ -22,7 +37,7 @@
         console.log(data.length);
         for(var index in data){
 
-            prov.append('<option value="" >'+data[index].provname+'</option>');
+            prov.append('<option value="" class="opt">'+data[index].provname+'</option>');
         }
     </script>
 </body>
