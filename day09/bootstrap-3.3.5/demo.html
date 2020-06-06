@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,21 +10,63 @@
     <!-- bootstrap.js依赖jQuery,需要先导入 -->
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <style>
+        .container,.container-fluid{
+            background-color: pink;
+            height: 1000px;
+        }
+        .row>div{
+            /* height: 50px; */
+            /* border: royalblue solid 1px; */
+        }
+    </style>
 </head>
 <body>
-    <table class="table">
-        <tr>
-            <td>姓名</td>
-            <td>年龄</td>
-        </tr>
-        <tr>
-            <td>QTX</td>
-            <td>18</td>
-        </tr>
-        <tr>
-            <td>小泽</td>
-            <td>18</td>
-        </tr>
-    </table>
+    <div class="container">
+        <!-- <div class="row">
+            <div class="col-md-1 col-sm-1 col-xs-1 col-lg-1"></div>
+            <div class="col-md-1 col-sm-1 col-xs-1 col-lg-1"></div>
+            <div class="col-md-1 col-sm-1 col-xs-1 col-lg-1"></div>
+            <div class="col-md-1 col-sm-1 col-xs-1 col-lg-1"></div>
+            <div class="col-md-1 col-sm-1 col-xs-1 col-lg-1"></div>
+            <div class="col-md-1 col-sm-1 col-xs-1 col-lg-1"></div>
+            <div class="col-md-1 col-sm-1 col-xs-1 col-lg-1"></div>
+            <div class="col-md-1 col-sm-1 col-xs-1 col-lg-1"></div>
+            <div class="col-md-1 col-sm-1 col-xs-1 col-lg-1"></div>
+            <div class="col-md-1 col-sm-1 col-xs-1 col-lg-1"></div>
+            <div class="col-md-1 col-sm-1 col-xs-1 col-lg-1"></div>
+            <div class="col-md-1 col-sm-1 col-xs-1 col-lg-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6" ></div>
+            <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6" ></div>
+        </div>
+        <div class="row">
+            <div class="col-md-7 col-sm-7 col-xs-7 xol-lg-7"></div>
+            <div class="col-md-5 col-sm-5 col-xs-5 xol-lg-5"></div>
+        </div> -->
+        <div class="row">
+            <div class="col-md-4 col-sm-12   col-xs-6 ">
+                <table class="table-hover table table-bordered ">
+                    <tr class="success">
+                        <td>姓名</td>
+                        <td>年龄</td>
+                    </tr>
+                    <tr class="warning">
+                        <td>QTX</td>
+                        <td>18</td>
+                    </tr>
+                    <tr class="active">
+                        <td>小泽</td>
+                        <td>18</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-4 col-sm-12   hidden-xs"></div>
+            <div class="col-md-4 col-sm-12  col-xs-6 "></div>
+
+        </div>
+    </div>
+
 </body>
 </html>
