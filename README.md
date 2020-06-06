@@ -146,3 +146,6 @@ var res=JSON.stringify(qtx);
    city=$('#city').find('option:selected').text();
    //在'#city'中找到属性为selected的option
 ```
+3. 获取或设置标签属性
+  attr():获取和设置写在标签内部的属性的值,若没写入过，会报错.
+  prop():获取和设置标签原本自带的属性的值，若没有设置，则为undefined.
