@@ -136,3 +136,13 @@ var res=JSON.stringify(qtx);
 //__proto__: Object
 ```
 
+# day08
+1. jQuery工厂函数：$()
+	用于加工对象，获取元素节点
+	
+2. 选择器：id 标签 类 群组  后代/子代  相邻兄弟/通用兄弟,**过滤选择器**
+	过滤选择器：配合其它选择器，设置选择条件。
+```javascript
+   city=$('#city').find('option:selected').text();
+   //在'#city'中找到属性为selected的option
+```
