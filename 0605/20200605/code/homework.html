@@ -22,10 +22,11 @@
     </style>
 </head>
 <body>
+    <form action="">
     <select name="" id="prov"></select>
     <select name="" id="city"></select>
     <select name="" id="area"></select>
-
+    </form>
 
     <script src="../js/jquery.min.js"></script>
     <script src="../js/data.js"></script>
@@ -41,7 +42,7 @@
         
 
         $.each(data,function(index,element){
-            $('#prov').append(`<option value="${element.provld}"  class='opt'>`+element.provname+'</option>');
+            $('#prov').append(`<option value="${element.provId}"  class='opt'>`+element.provname+'</option>');
         })
 
         $('#prov').on('change',function(){
