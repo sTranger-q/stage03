@@ -147,5 +147,38 @@ var res=JSON.stringify(qtx);
    //在'#city'中找到属性为selected的option
 ```
 3. 获取或设置标签属性
-  attr():获取和设置写在标签内部的属性的值,若没写入过，会报错.
-  prop():获取和设置标签原本自带的属性的值，若没有设置，则为undefined.
+    attr():获取和设置写在标签内部的属性的值,若没写入过，会报错.
+    prop():获取和设置标签原本自带的属性的值，若没有设置，则为undefined.
+
+
+
+# Day09
+1.jQuery   redy/load
+
+原生onload事件不能重复书写，会产生覆盖问题；jquery中对事件做了优化,可以重复书写ready方法,依次执行
+
+```javascript
+// ready 这个方法只是在页面所有的DOM加载完毕后就会触发
+
+// 方式1
+$(function(){ 
+// do something 
+}); 
+
+// 方式2
+$(document).ready(function(){ 
+//do something 
+});
+
+// 方式3
+$().ready(function(){ 
+//do something 
+});
+
+
+// load 这个方法会等到页面所有内容加载完毕后才会触发
+
+$(window).load(function() { 
+alert("hello"); 
+}); 
+```
