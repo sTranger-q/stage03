@@ -231,6 +231,15 @@ $(function(){
 
 3. this表示事件的触发对象，在jquery中可以使用，注意转换类型。this为原生对象只能使用原生的属性和方法，可以使用$(this)转换为jquery对象，使用jquery方法。
 
+4. 事件委托on：为还未添加的元素添加事件，可以通过事件绑定，先添加到父元素，父(祖先)元素会对子(后代)元素进行监听
+
+   ```javascript
+   //$(selector).on('事件名','执行事件的元素（后代）'，function(){})
+   $('#parent').on('click','p',function(){
+                    console.log($(this).text());
+            })
+   ```
+
 ## 3.实战
 
 ### 	1. 页面效果

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件绑定</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <div id="parent">
+       
+    </div>
+    <button>添加P元素</button>
+    <script>
+        $().ready(function(){
+            $('button').click(function(){
+                $('#parent').append('<p>我是新来的</p>')
+            //      $('p').on('click',function(){
+            // console.log($(this).text());
+            //         })
+            })
+            //事件委托
+            $('#parent').on('click','p',function(){
+                    console.log($(this).text());
+            })
+       })
+        
+    </script>
+</body>
+</html>
