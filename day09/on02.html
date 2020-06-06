@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .active{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        $().ready(
+            function(){
+                // $('div').on('mouseenter',function(){
+                //     $(this).addClass('active');
+                
+                // }).on('mouseleave',function(){
+                //         $(this).removeClass('active');
+                //     })
+                //注意事件的书写顺序
+                $('div').on('mouseover mouseout',function(){
+                    $(this).toggleClass('active');
+                })
+            }
+        )
+    </script>
+</body>
+</html>
