@@ -11,18 +11,24 @@
             height: 300px;
             background-color: red;
             border-radius: 50%;
-            
+            position: absolute;
+            margin-left: 300px;
         }
     </style>
 </head>
 <body>
     <div id='ball'></div>
     <script>
-        $('#ball').animate({
-            'margin-left':'3000px',
-        },3000,function(){
-            $(this).animate({'margin-left':'0'},2000)
-        })
+    // setInterval(function(){
+    //     var left=Math.random()*1000
+    //     var top=Math.random()*1000
+    //     $('#ball').animate({
+    //         'margin-left':`${left}px`,
+    //         'margin-top':`${top}px`
+    //     })
+            
+    // },1000)
+        
     </script>
 </body>
 </html>
