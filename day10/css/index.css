@@ -16,8 +16,15 @@ nav .row{
     text-decoration:none;
    
 }
-.col-md-3>a:hover{
-    padding:0;
+.thumbnail>img{
+    width: 100%;
+    height: 100%;
+    /* 缩放 */
+    transform: scale(0.95);
+    transition: all 0.3s;
+}
+.thumbnail:hover>img{
+  transform: scale(1);
     
 }
 body>.container{
