@@ -14,18 +14,26 @@
 <body>
     <div></div>
     <script>
-        // document.body.scrollHeight //谷歌
+        // document.body.scrollHeight 
             //document.documentElement.scrollHeight
         function getScrollHeight(){
             return Math.max(
                     document.body.scrollHeight,
                     document.documentElement.scrollHeight
             )
-}
+        }
+        //获取当前窗口的可视高度
+        function getClientHeight(){
+            return Math.max(
+                document.body.clientHeight,
+                document.documentElement.clientHeight
+            )
+        }
         window.onscroll=function(){
             // console.log('run')
-            
-            
+            var scorllH=getScrollHeight();
+            var clientH=getClientHeight();
+            console.log(scorllH,clientH)
         }
     </script>
 </body>
