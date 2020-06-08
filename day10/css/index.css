@@ -11,3 +11,10 @@ nav>.container{
 nav .row{
     margin-top: 20px;
 }
+.row a{
+    text-align: center;
+    text-decoration:none;
+}
+/* .col-md-3>a:hover{
+    width: 260px;
+} */
