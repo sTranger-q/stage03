@@ -182,3 +182,71 @@ $(window).load(function() {
 alert("hello"); 
 }); 
 ```
+
+# Day10
+
+- HTML
+	表单：get/post
+	get:get: http://www,tmooc.cn?key=value&key=value 
+	post:post: key=value&key=value
+	表单控件:属性（name,value）
+
+- CSS:排版布局与样式美化
+```
+选择器：id，类，标签，群组，后代子代，伪类
+优先级：权重	
+
+display: 
+block: 独占一行，可手动设置宽高，默认100%
+inling: 可以和其它内容一行显示，但是宽高由内容决定
+inling-block: 可共行,可手动设置宽高
+none: 隐藏元素
+内容溢出：overflow:auto/hidden
+边框圆角：border-radius
+
+外边距溢出：子元素外边距作用在了父元素(无border)身上,会把父元素带着一起移动
+解决：给父元素加边框或加上内边距
+
+浮动和定位：摆脱元素在页面排列的默认方式
+浮动：解决块元素的水平排列
+定位：结合偏移属性调整元素的显示位置
+								
+```
+- JS：页面交互
+```
+变量、常量、数据类型、运算符号
+隐式转换：字符串在做+运算时，会把其它类型转换为字符串
+						其它情况下，一律转换为number
+						在逻辑判断时：字符串之间的比较-->比较Unicode码
+														其它情况，一律转换为number,如果无法转换，则转换为NaN，结果一律为False
+语句：if、switch、while、do-while
+函数（传参）、匿名函数、作用域
+声明提前： 
+					   在js执行时，会把声明提前到最上方
+					   变量只会提前变量名，赋值在后面进行
+						函数会将内容一起提前
+内置方法：
+					 对象{'key':'value'} 、数组[]
+					 for(index in obj){}   index--->下标
+字符串，正则表达式对象(RegExp，new RegExo('reg','ig'), /reg/ig   )
+随机数，时间对象(new Date())-->倒计时
+
+BOM对象(Browser Object Model):
+						定时器:周期性定时器，一次性定时器
+JS是单线程执行，但是JS代码在执行过程中，还有其它线程的参与：
+						JS引擎-->执行JS代码
+							↑↑↑↑↑协助
+	事件触发线程     定时器触发线程     HTTP异步线程
+		
+history     location
+location.hrf = 地址-->页面跳转
+
+前段数据获取思路：
+		location.hrf获取地址栏内容，再进行分割
+
+DOM节点(Document Object Model)
+jQuery....
+
+```
+
+
