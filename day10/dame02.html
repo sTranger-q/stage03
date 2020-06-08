@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>滚动条</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     <style>
         div{
             background-color: pink;
@@ -14,27 +17,16 @@
 <body>
     <div></div>
     <script>
-        // document.body.scrollHeight 
-            //document.documentElement.scrollHeight
-        function getScrollHeight(){
-            return Math.max(
-                    document.body.scrollHeight,
-                    document.documentElement.scrollHeight
-            )
-        }
-        //获取当前窗口的可视高度
-        function getClientHeight(){
-            return Math.max(
-                document.body.clientHeight,
-                document.documentElement.clientHeight
-            )
-        }
-        window.onscroll=function(){
-            // console.log('run')
-            var scorllH=getScrollHeight();
-            var clientH=getClientHeight();
-            console.log(scorllH,clientH)
-        }
+    document.onscroll = function () {
+    var scollH = $(document).height();
+    var scollT = Math.ceil($(document).scrollTop());
+    var clientH = $(window).height();
+    console.log(typeof(scollH))
+    if (Number(scollT + clientH)<150) {
+        console.log('OK')
+    }
+
+}
     </script>
 </body>
 </html>
