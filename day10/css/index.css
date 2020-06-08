@@ -1,4 +1,5 @@
 /* 导航栏容器样式 */
 nav>.container{
-        height: ;
+        min-height: 50px;
+        
 }
