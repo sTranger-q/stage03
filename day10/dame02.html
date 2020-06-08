@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滚动条</title>
+    <style>
+        div{
+            background-color: pink;
+            height: 3000px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // document.body.scrollHeight //谷歌
+            //document.documentElement.scrollHeight
+        function getScrollHeight(){
+            return Math.max(
+                    document.body.scrollHeight,
+                    document.documentElement.scrollHeight
+            )
+}
+        window.onscroll=function(){
+            // console.log('run')
+            
+            
+        }
+    </script>
+</body>
+</html>
