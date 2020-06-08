@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <a href="">click me</a>
+    <!-- javascript:void(0); 表示href点击时不执行任何操作-->
+    <!-- <a href="javascript: void(0);">click me</a> -->
+    <!-- href='#id' 表示对ID的匹配  跳转到指定id值的位置上-->
+    <a href="javascript: ;">click me</a>
     <script>
         var a=document.getElementsByTagName('a')[0];
         a.onclick=function(){
