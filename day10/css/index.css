@@ -23,6 +23,7 @@ nav .row{
     transform: scale(0.95);
     transition: all 0.3s;
 }
+/* 鼠标进入父元素，修改子元素 */
 .thumbnail:hover>img{
   transform: scale(1);
     
