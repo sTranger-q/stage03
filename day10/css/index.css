@@ -1,5 +1,6 @@
 /* 导航栏容器样式 */
 nav>.container{
-        min-height: 50px;
-        
+    /* 最小高度  通常对一个空元素暂时支撑高度*/
+    min-height: 100px;
+    border: 5px solid red;
 }
