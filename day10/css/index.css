@@ -14,7 +14,11 @@ nav .row{
 .row a{
     text-align: center;
     text-decoration:none;
+
+.col-md-3>a:hover{
+    padding:0;
+    
 }
-/* .col-md-3>a:hover{
-    width: 260px;
-} */
+body>.container{
+    padding: 0;
+}
